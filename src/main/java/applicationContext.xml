@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+				http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans.xsd 
+				http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd
+				http://www.springframework.org/schema/aop
+				http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- XML中启动Aspectj的自动代理 -->
+	<aop:aspectj-autoproxy />
+	<!-- <context:component-scan base-package="com.szk" /> -->
+	
+ 	<!-- <bean id="aspectj1" class="com.szk.aspect.RoleAspect" /> -->
+ 	<!-- <bean id="aspectj2" class="com.szk.aspect.RoleAspect2" /> -->
+ 	<bean id="multiAspect1" class="com.szk.aspect.multi.Aspect1" />
+ 	<bean id="multiAspect2" class="com.szk.aspect.multi.Aspect2" />
+ 	<bean id="multiAspect3" class="com.szk.aspect.multi.Aspect3" />
+	<bean id="roleServiceImpl" class="com.szk.service.impl.RoleServiceImpl" />
+	<bean id="role" class="com.szk.vo.Role" /> 
+	
+</beans>
